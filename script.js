@@ -1,36 +1,35 @@
-// Function 1: Validate Email
-function isValidEmail(email) {
+// 1. Validate email format (basic validation)
+function validateEmail(email) {
   return email.includes("@") && email.includes(".");
 }
+console.log(validateEmail("test@example.com")); // true
 
-// Function 2: Random Featured Project
-const projects = ["Portfolio Website", "To-do App", "Blog Template"];
+// 2. Get a random featured project from your portfolio
+const projects = ["E-Commerce Site", "To-Do App", "Travel Blog", "Portfolio Redesign"];
+
 function getRandomProject() {
   const index = Math.floor(Math.random() * projects.length);
   return projects[index];
 }
+console.log(`Featured project: ${getRandomProject()}`);
 
-// Function 3: Calculate Total Price
-const prices = [25.5, 19.9, 40];
-function calculateTotal(pricesArray) {
-  return pricesArray.reduce((total, price) => total + price, 0);
-}
+// 3. Store user feedback messages in an array
+let feedbackMessages = [];
 
-// Function 4: Add Feedback to Array
-let feedbackArray = [];
 function addFeedback(message) {
-  feedbackArray.push(message);
-  return feedbackArray;
+  feedbackMessages.push(message);
+  return feedbackMessages;
 }
+console.log(addFeedback("Great design!")); // ["Great design!"]
 
-// Function 5: Feature Toggle
-function toggleFeature(flag) {
-  return flag ? "Feature Enabled" : "Feature Disabled";
+// 4. Count the total number of projects
+function countProjects(projectArray) {
+  return `You have ${projectArray.length} projects.`;
 }
+console.log(countProjects(projects)); // You have 4 projects.
 
-// Example console tests
-console.log(isValidEmail("me@example.com"));
-console.log("Random Project:", getRandomProject());
-console.log("Total:", calculateTotal(prices));
-console.log(addFeedback("Love your site!"));
-console.log(toggleFeature(true));
+// 5. Personalized greeting using user's first and last name
+function greetUser(firstName, lastName) {
+  return `Welcome to my portfolio, ${firstName} ${lastName}!`;
+}
+console.log(greetUser("Jane", "Doe")); // Welcome to my portfolio, Jane Doe!

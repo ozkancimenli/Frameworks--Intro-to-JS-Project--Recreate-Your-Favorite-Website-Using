@@ -1,147 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ozkan Cimenli - Developer Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">MyPortfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navLinks">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Ozkan Cimenli</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Hero Section -->
+<header id="home" class="vh-100 position-relative text-white">
+  <!-- dark -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- content -->
+  <div class="container h-100 d-flex flex-column justify-content-center align-items-center position-relative text-center">
+    <h1 class="display-4 fw-bold">Hi, I'm Ozkan Cimenli</h1>
+    <p class="lead">Frontend Developer & UI/UX Designer</p>
+    <a href="#projects" class="btn btn-outline-light mt-3">View My Work</a>
   </div>
-</nav>
+</header>
 
-<!-- Hero Section -->
-<section id="home" class="bg-light text-center p-5">
-  <h1 class="display-4">Welcome to My Portfolio</h1>
-  <p class="lead">Frontend Developer | JavaScript Enthusiast | UI/UX Learner</p>
-</section>
-
-<!-- Carousel -->
-<div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="project1.jpg" class="d-block w-100" alt="Project 1">
+  <!-- Carousel -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Showcase</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/assets/img1.jpg" class="d-block w-100 rounded" alt="Project 1">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/img2.jpg" class="d-block w-100 rounded" alt="Project 2">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/img3.jpg" class="d-block w-100 rounded" alt="Project 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <img src="project2.jpg" class="d-block w-100" alt="Project 2">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
+  </section>
 
-<!-- Cards Section -->
-<section id="about" class="container my-5">
-  <div class="row text-center">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Web Development</h5>
-          <p class="card-text">Building responsive websites using HTML, CSS, and JS.</p>
+  <!-- Project Cards -->
+  <section id="projects" class="bg-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Weather App</h5>
+              <p class="card-text">A simple weather app using OpenWeather API and Bootstrap styling.</p>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#projectModal">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Portfolio Website</h5>
+              <p class="card-text">Modern personal portfolio with responsive design and animation.</p>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#projectModal">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Task Manager</h5>
+              <p class="card-text">To-do app with localStorage support and task filtering.</p>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#projectModal">Details</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">JavaScript</h5>
-          <p class="card-text">Creating dynamic features and interactivity.</p>
+  </section>
+
+  <!-- Table Section -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Project Summary</h2>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Type</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Weather App</td><td>Web App</td><td>2025</td></tr>
+        <tr><td>Portfolio Site</td><td>Website</td><td>2025</td></tr>
+        <tr><td>Task Manager</td><td>Web App</td><td>2024</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary px-5">Send Message</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">UI/UX Design</h5>
-          <p class="card-text">Designing intuitive user interfaces and experiences.</p>
+  </section>
+
+  <!-- Modal Component -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Project Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          More info about the selected project will go here.
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Project Table -->
-<section class="container my-5">
-  <h3>Project List</h3>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Project Name</th>
-        <th>Type</th>
-        <th>Year</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Portfolio Website</td>
-        <td>Frontend</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>Blog Template</td>
-        <td>HTML/CSS</td>
-        <td>2024</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- Contact Form -->
-<section id="contact" class="container my-5">
-  <h3>Contact Me</h3>
-  <form>
-    <div class="mb-3">
-      <label for="nameInput" class="form-label">Name</label>
-      <input type="text" class="form-control" id="nameInput" required>
-    </div>
-    <div class="mb-3">
-      <label for="emailInput" class="form-label">Email</label>
-      <input type="email" class="form-control" id="emailInput" required>
-    </div>
-    <div class="mb-3">
-      <label for="messageInput" class="form-label">Message</label>
-      <textarea class="form-control" id="messageInput" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-</section>
-
-<!-- Modal -->
-<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="infoModalLabel">Thank You!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Your message has been received. I will contact you soon.
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
