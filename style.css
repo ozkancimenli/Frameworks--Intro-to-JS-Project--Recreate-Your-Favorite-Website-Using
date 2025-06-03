@@ -12,15 +12,17 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.navbar-brand, .nav-link {
-  color: #222 !important;
+.nav-link {
+  color: #222;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #0d6efd !important;
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: #ffffff; 
 }
-
 /* Hero Section */
 .hero {
   padding: 80px 0;
